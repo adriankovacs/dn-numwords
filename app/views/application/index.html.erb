@@ -1,1 +1,11 @@
-hello
+<div>
+  <%= form_tag(:get_numwords) do -%>
+    <%= text_field_tag :number, params[:number] -%>
+    <%= submit_tag "Go, get numwords" -%>
+  <% end -%>
+</div>
+<% if @result -%>
+  <div>
+    <%= @result -%>
+  </div>
+<% end -%>
