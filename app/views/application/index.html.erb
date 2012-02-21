@@ -6,6 +6,11 @@
 </div>
 <% if @result -%>
   <div>
-    <%= @result -%>
+    <%= "#{@result}" -%>
+  </div>
+<% end -%>
+<% if params[:action] != "index" -%>
+  <div>
+    <%= link_to "back to index", :root -%>
   </div>
 <% end -%>
